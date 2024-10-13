@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% block title %}Restaurants{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>All Todo List</h1>
+
+	  <table class="table table-dark table-striped table-hover">
+          <!-- This is where you will write the code to render a Bootstrap 
+          Table that contains all the information from the 
+          cafe-data.csv file. -->
+          <thead>
+            <tr>
+                {% for item in todo[0] %}
+                  <th scope="col">
+                      {{item}}
+                  </th>
+                {% endfor %}
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in todo[1:] %}
+                <tr>
+                    {% for sub_item in item %}
+                            <td>{{sub_item}}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+          </tbody>
+      </table>
+
+      <p><a href="{{url_for('home')}}">Return to index page</a></p>
+
+      <!-- This is where your WTForm will go -->
+      {{ render_form(form) }}
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

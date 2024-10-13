@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Todo List{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <div class="container">
+  <h1 class="display-4"> Todo List 💻</h1>
+  <p class="lead">Please don't die before completing these tasks</p>
+  <hr class="my-4">
+  <p>Check you Todo list here!</p>
+  <a class="btn btn-warning btn-lg" href="{{url_for('todo')}}" role="button">Show Todo!</a>
+        <a class="btn btn-warning btn-lg" href="{{url_for('new_todo')}}" role="button">Add New Todo!</a>
+</div>
+    </div>
+
+{% endblock %}
