@@ -59,7 +59,7 @@ for label, row in data.iterrows():
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = os.environ.get('key')
 Bootstrap5(app)
 
 
