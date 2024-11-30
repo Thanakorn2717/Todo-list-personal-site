@@ -9,6 +9,7 @@ import datetime
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import os
 
 '''
 Red underlines? Install the required packages first:
